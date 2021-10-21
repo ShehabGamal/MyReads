@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 const SearchPage = ()=>{
     return(
- <div className="search-books" id="SearchPage">
+ <div className="search-books">
     <div className="search-books-bar">
-      <a className="close-search" href="#MainPage">Close</a>
+      <Link className="close-search" to="/">Close</Link>
       <div className="search-books-input-wrapper">
         <input type="text" placeholder="Search by title or author"/>
 
