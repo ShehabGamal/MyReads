@@ -4,7 +4,7 @@ import WantToRead from "../Components/WantToRead"
 import Read from "../Components/Read"
 import { Link } from 'react-router-dom'
 
-const MainPage = ()=>{
+const MainPage = ({BooksList})=>{
     
     return(
         <div className="list-books">
@@ -13,9 +13,9 @@ const MainPage = ()=>{
             </div>
             <div className="list-books-content">
               <div>
-                  <CurrentlyReading />
-                  <WantToRead />
-                  <Read />
+                  <CurrentlyReading BooksList={BooksList}/>
+                  <WantToRead BooksList={BooksList} />
+                  <Read  BooksList={BooksList} />
               </div>
             </div>
             <div className="open-search">
