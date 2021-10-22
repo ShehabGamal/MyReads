@@ -15,12 +15,10 @@ const BooksApp = ()=>{
   useEffect(()=>{
     BooksAPI.getAll().then(data=>setBooksList(data))
 
-  },[])
+  })
   const shelfChanger = (book,shelf)=>{
     BooksAPI.update(book,shelf)
-    BooksAPI.getAll().then(data=>setBooksList(data))
-    
-  } 
+} 
   
 	
     return (
