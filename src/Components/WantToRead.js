@@ -1,7 +1,7 @@
 import React from 'react'
 import Book from "../Components/Book"
 
-const WantToRead = ({BooksList})=>{
+const WantToRead = ({BooksList,shelfChanger})=>{
     
     return(
         <div className="bookshelf">
@@ -11,7 +11,7 @@ const WantToRead = ({BooksList})=>{
                     
                       {BooksList.filter(book=>book.shelf==="wantToRead").map(
                         book=>(<li key={book.id}>
-                        <Book book={book}/>
+                        <Book book={book} shelfChanger={shelfChanger}/>
                       </li>)
                       )}
                       

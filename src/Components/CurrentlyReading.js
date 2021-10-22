@@ -1,7 +1,7 @@
 import React from 'react'
 import Book from "../Components/Book"
 
-const CurrentlyReading = ({BooksList})=>{
+const CurrentlyReading = ({BooksList,shelfChanger})=>{
     return(
         <div className="bookshelf">
                   <h2 className="bookshelf-title">Currently Reading</h2>
@@ -10,7 +10,7 @@ const CurrentlyReading = ({BooksList})=>{
                     
                     {BooksList.filter(book=>book.shelf==="currentlyReading").map(
                       book=>(<li key={book.id}>
-                      <Book book={book}/>
+                      <Book book={book} shelfChanger={shelfChanger} />
                     </li>)
                     )}
                     
