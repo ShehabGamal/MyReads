@@ -6,7 +6,7 @@ import {useState} from 'react'
 
 
 
-const SearchPage = ()=>{
+const SearchPage = ({shelfChanger})=>{
     const [Query,setQuery] = useState("");
     const [SearchedBooksList,setSearchedBooksList]=useState([]);
     const updateQuery=(Query)=>{
@@ -37,7 +37,7 @@ const SearchPage = ()=>{
               </div>
               <div className="search-books-results">
                 <ol className="books-grid">
-                  {SearchedBooksList.map(searchedBook=><li key={searchedBook.id}><Book book={searchedBook}/></li>)}
+                  {SearchedBooksList.map(searchedBook=><li key={searchedBook.id}><Book book={searchedBook} shelfChanger={shelfChanger}/></li>)}
                 </ol>
               </div>
         </div>
