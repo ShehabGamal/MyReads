@@ -27,7 +27,7 @@ const BooksApp = ()=>{
           <MainPage BooksList={BooksList} shelfChanger={shelfChanger}/>
         </Route>
         <Route exact path="/Search">
-          <SearchPage shelfChanger={shelfChanger} />
+          <SearchPage shelfChanger={shelfChanger} BooksList={BooksList}/>
         </Route>
 
       </div>

@@ -10,7 +10,7 @@ const CurrentlyReading = ({BooksList,shelfChanger})=>{
               
               {BooksList.filter(book=>book.shelf==="currentlyReading").map(
                 book=>(<li key={book.id}>
-                <Book book={book} shelfChanger={shelfChanger} />
+                <Book book={book} shelfChanger={shelfChanger} currentShelf="currentlyReading" />
               </li>)
               )}
               

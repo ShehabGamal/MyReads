@@ -11,7 +11,7 @@ const WantToRead = ({BooksList,shelfChanger})=>{
               
                 {BooksList.filter(book=>book.shelf==="wantToRead").map(
                   book=>(<li key={book.id}>
-                  <Book book={book} shelfChanger={shelfChanger}/>
+                  <Book book={book} shelfChanger={shelfChanger} currentShelf="wantToRead"/>
                 </li>)
                 )}
                 

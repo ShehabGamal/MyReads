@@ -10,7 +10,7 @@ const Read = ({BooksList,shelfChanger})=>{
               <ol className="books-grid">
                 {BooksList.filter(book=>book.shelf==="read").map(
                   book=>(<li key={book.id}>
-                  <Book book={book} shelfChanger={shelfChanger} />
+                  <Book book={book} shelfChanger={shelfChanger} currentShelf="read" />
                 </li>)
                 )}
                 
