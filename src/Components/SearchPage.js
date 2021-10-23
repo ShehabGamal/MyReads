@@ -14,8 +14,15 @@ const SearchPage = ()=>{
       updateSearchedBooksList(Query);
     }
     const updateSearchedBooksList=(Query)=>{
-      BooksAPI.search(Query).then(searchedBooks=>setSearchedBooksList(searchedBooks))
-    }
+      if(Query){
+      BooksAPI.search(Query).then((searchedBooks)=>{if(searchedBooks.error){
+        setSearchedBooksList([])
+      }else{
+        setSearchedBooksList(searchedBooks)
+      }
+    })}else{
+      setSearchedBooksList([]);
+    }}
     
   return(
         <div className="search-books">
